@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+*.log
+debug_*.jpg
+*.mp4
+*.h264
+.vscode/
+.idea/

@@ -1,0 +1,9 @@
+# Core dependencies -- run anywhere (dev laptop, CI, or the Pi).
+# Hardware-specific packages (camera, motor GPIO) live in requirements-pi.txt
+# and are only imported inside their concrete driver/source classes, so the
+# rest of robot_core works fine without them installed.
+flask>=2.3
+opencv-python-headless>=4.8
+numpy>=1.24
+PyYAML>=6.0
+pytest>=7.4

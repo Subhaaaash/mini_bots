@@ -1,0 +1,9 @@
+# Hardware-only dependencies -- install these on the Raspberry Pi itself.
+# picamera2/libcamera come from apt (python3-picamera2, python3-libcamera) on
+# Raspberry Pi OS; they are listed here for reference but are usually NOT
+# pip-installable off-Pi, which is why robot_core keeps them out of the
+# top-level requirements.txt.
+-r requirements.txt
+picamera2
+gpiozero
+RPi.GPIO

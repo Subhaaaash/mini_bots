@@ -1,0 +1,45 @@
+# Robot configuration -- pick hardware/behavior by name and tune here
+# instead of editing code. See docs/architecture.md for what each section
+# maps to, and docs/adding_a_behavior.md / adding_a_motor_driver.md for how
+# to register a new "type".
+
+camera:
+  type: picamera2       # "picamera2" (Pi hardware) or "mock" (dev/test, no camera)
+  size: [640, 480]
+  hflip: true
+  vflip: true
+  # mock-only, ignored by picamera2:
+  path: null             # path to a video file or folder of images; null = blank frames
+  fps: 30                # mock read() paces itself to this rate, like a real camera would
+
+chassis:
+  min_effective_speed: 0.25   # motor deadband compensation, see DifferentialDriveKinematics
+
+motor_driver:
+  type: mock              # "mock" (safe default, prints commands) or "gpiozero_hbridge"
+  # gpiozero_hbridge-only, ignored by mock:
+  left_pins: [17, 18]
+  right_pins: [22, 23]
+
+safety:
+  max_lost_frames: 10
+  manual_timeout: 0.4
+
+behavior:
+  type: line_follow_centerline
+  roi_top_frac: 0.50
+  roi_bottom_frac: 0.85
+  params:
+    kp: 0.003
+    ki: 0.0001
+    kd: 0.001
+    base_speed: 0.35
+    max_correction: 0.3
+    heading_weight: 1.0
+    lookahead_px: 150
+
+dashboard:
+  enabled: true
+  host: "0.0.0.0"
+  port: 8000
+  jpeg_quality: 70
