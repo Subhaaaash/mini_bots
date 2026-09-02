@@ -1,7 +1,7 @@
 
 
 
-https://github.com/user-attachments/assets/d518a9f6-1304-44aa-875e-499f0d7d4795
+
 
 
 
@@ -37,11 +37,13 @@ Full design notes: [`docs/architecture.md`](docs/architecture.md).
 ## Demo
 
 **Web dashboard** -- live MJPEG stream, start/stop, manual d-pad, live tuning sliders:
+
 https://github.com/user-attachments/assets/05ce5642-afc2-4491-90c5-c2ec87c58dea
 
 <video src="https://github.com/Subhaaaash/mini_bots/raw/main/media/dashboard_demo.mp4" controls width="640"></video>
 
 **On the track** -- the robot following a line end-to-end:
+
 https://github.com/user-attachments/assets/d518a9f6-1304-44aa-875e-499f0d7d4795
 
 <video src="https://github.com/Subhaaaash/mini_bots/raw/main/media/track_demo.mp4" controls width="640"></video>
