@@ -25,6 +25,18 @@ CameraSource --frame--> Behavior --DriveCommand(linear, angular)--> SafetyGovern
 
 Full design notes: [`docs/architecture.md`](docs/architecture.md).
 
+## Demo
+
+**Web dashboard** -- live MJPEG stream, start/stop, manual d-pad, live tuning sliders:
+
+<video src="https://github.com/Subhaaaash/mini_bots/raw/main/media/dashboard_demo.mp4" controls width="640"></video>
+
+**On the track** -- the robot following a line end-to-end:
+
+<video src="https://github.com/Subhaaaash/mini_bots/raw/main/media/track_demo.mp4" controls width="640"></video>
+
+(If your viewer doesn't render `<video>` inline, the files are also playable directly: [`media/dashboard_demo.mp4`](media/dashboard_demo.mp4), [`media/track_demo.mp4`](media/track_demo.mp4).)
+
 ## Running it
 
 ### 1. Clone
@@ -125,6 +137,8 @@ config/           robot.yaml -- hardware + behavior selection and tuning
 docs/             architecture + "how to add a X" guides
 tests/            unit tests (run without any Pi hardware)
 examples/         standalone example scripts, including the original single-file line follower
+media/            demo videos referenced above
+stl/              3D-printable chassis/mount files
 ```
 
 ## Status

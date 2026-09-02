@@ -11,5 +11,6 @@ env/
 debug_*.jpg
 *.mp4
 *.h264
+!media/*.mp4
 .vscode/
 .idea/
